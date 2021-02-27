@@ -1,0 +1,44 @@
+@charset"UTF-8";
+
+*{
+    margin:0px;
+    padding:0px;
+}
+ul, ol, li{
+    /* 목록 머리기호 지정 여부*/
+    list-style: none;
+}
+
+section{
+    width:100%;
+    height: 100vh;
+    background: #222;
+    display: flex;
+    align-items: center;
+   
+}
+section article {
+    width: 100%;
+    height: 50vh;
+    background: pink;
+    /* 자기가 원래 위치해야 하는 곳 기준으로 상대적인 거리만큼 이동 */
+    position: relative;
+    /* 요소 내 컨텐츠가 너무 커서 모두 보여주기 힘들 때 넘치는 부분은 자른다. */
+    overflow: hidden;
+}
+section article img {
+    width: 100%;
+    height: 100%;
+    /* 가로세로 비율을 유지한 채 사이즈가 조절되며 비율이 맞지 않더라도
+    이미지를 확대해 컨테이너를 완전히 채운다. */
+    object-fit: cover;
+    /* 원래 위치와 상관 없이 위치를 지정할 수 있다. */
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background-position: center;
+    /* 배경 이미지의 반복 여부 */
+    background-repeat: no-repeat;
+    /* 이미지가 찌그러지지 않는 한도 내에서 제일 크게 배경 설정 */
+    background-size: cover;
+}
